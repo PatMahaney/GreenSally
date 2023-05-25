@@ -1,31 +1,43 @@
-//
-//
+//Sally.cpp
+//Patrick Mahaney
+//This program asks the user how many the the user wants to see the lyric of the song "Flower" by Moby
 
 #include <iostream>
 using namespace std;
+// This function prompts the instructions for the user to read
 void instructions()
 {
 	cout << "How many times you want to bring Sally up and Down?:";
 	return;
 }
-void getInput(int &ans)
+// This function takes input from the user by have a value referenced
+void getInput(int& ans)
 {
 	cin >> ans;
 }
+// This function takes the value referenced and uses it the argument
 void lyrics(int ans)
 {
+	// This loop iterates until the number that was input by the user
 	for (int i = 0; i < ans; i++)
 	{
-		cout << "Green Sally Up\nGreen Sally Down\nLift and Squat, got to tear the ground!\n\n" << endl;
+		cout << "Green Sally Up\nGreen Sally Down\nLast one squat, gotta tear the ground!\n\n" << endl;
 	}
 	return;
 }
+//This function outputs the line after the lyric that repeats
+void output()
+{
+	cout << "Old Miss Lucy's dead and gone\nLeft me here to weep and moan\n";
+}
 int main()
 {
+	// integer varible initialized with a value of zero
 	int answer = 0;
 	instructions();
 	getInput(answer);
 	lyrics(answer);
+	output();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
